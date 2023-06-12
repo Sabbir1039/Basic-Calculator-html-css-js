@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                        <input id="display" class="output" type="text" name="display" readonly>
+                        <input id="result" class="result" type="text" name="result" readonly>
+                </div>
+                <div class="grid-containers">
+                    <input class="buttons upper" value="AC" onclick="clearDisplay()" readonly>
+                    <input class="buttons upper" value="&divide;" onclick="display.value += '/' " readonly>
+                    <input class="buttons upper" value="&times;" onclick="display.value += '*' " readonly>
+                    <input class="buttons magenta" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)" readonly>
+                    <input class="buttons" value="7" onclick="display.value += '7' " readonly>
+                    <input class="buttons" value="8" onclick="display.value += '8' " readonly>
+                    <input class="buttons" value="9" onclick="display.value += '9' " readonly>
+                    <input class="buttons magenta" value="-" onclick="display.value += '-' " readonly>
+                    <input class="buttons" value="4" onclick="display.value += '4' " readonly>
+                    <input class="buttons" value="5" onclick="display.value += '5' " readonly>
+                    <input class="buttons" value="6" onclick="display.value += '6' " readonly>
+                    <input class="buttons magenta" value="+" onclick="display.value += '+' " readonly>
+                    <input class="buttons" value="1" onclick="display.value += '1' " readonly>
+                    <input class="buttons" value="2" onclick="display.value += '2' " readonly>
+                    <input class="buttons" value="3" onclick="display.value += '3' " readonly>
+                    <input id="equal" class="buttons magenta" value="=" onclick="evaluateResult()" readonly>
+                    <input id="left" class="buttons" value="." onclick="display.value += '.' " readonly>
+                    <input class="buttons" value="0" onclick="display.value += '0' " readonly>
+                    <input class="buttons" value="%" onclick="display.value += '%' " readonly>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
